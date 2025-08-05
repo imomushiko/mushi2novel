@@ -1,0 +1,151 @@
+/* ベーススタイル */
+body {
+    background-color: #f4f4f1; /* 目に優しいクリーム系の背景 */
+    color: #2e2e2e;            /* くすみがかった黒でコントラスト柔らかめ */
+    font-family: "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 2em;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* タイトルなど */
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2d5b4e;
+    margin-bottom: 0.2em;
+    margin-top: 1.5em;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #3e7361;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.series {
+    font-size: 1.2em;
+    color: #5f8578;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* 小説本文 */
+article {
+    font-size: 1.05em;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.05);
+}
+
+/* ナビゲーション（目次・前話・次話） */
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    font-size: 0.95em;
+}
+
+nav a {
+    color: #336666;
+    text-decoration: none;
+    border-bottom: 1px dashed #336666;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #336666;
+    color: #224444;
+}
+
+/* スマホでも見やすいように */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 1em;
+    }
+    nav {
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: center;
+    }
+}
+
+/* 無効リンクを非表示 */
+  .disabled {
+    color: gray;
+    text-decoration: none;
+    pointer-events: none;
+  }
+
+/* summary をリンク風に */
+summary.linklike {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--link-color, #0645ad);      /* a と同じ色にする */
+  text-decoration: underline;
+}
+
+/* フォーカスやホバー時のアクセシビリティ */
+summary.linklike:focus, summary.linklike:hover {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* 既定の三角マーカーを消す（ブラウザ差あり）*/
+summary::-webkit-details-marker { display: none; }
+
+/* 自前のアイコンを付ける */
+summary.linklike::before {
+  content: "▶ ";
+  font-size: 0.95em;
+}
+details[open] > summary.linklike::before {
+  content: "▼ ";
+}
+
+.title .year {
+  font-size: 0.6em;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 0.1em;
+  color: #666;
+}
+
+.series .year {
+  font-size: 0.5em;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 0.1em;
+  color: #666;
+}
+
+/* ===== ヘッダー強調＆余白調整 ===== */
+.site-header {
+  padding-block: 1.75rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+.site-header .series {
+  font-size: clamp(1.9rem, 2.6vw, 2.2rem);
+  margin: 0 0 .5rem 0;
+}
+.site-header p {
+  margin: 0.25rem 0 0 0;
+}
+.site-header + main {
+  /* ヘッダー→最初の作品の距離を、作品間より広めに */
+  margin-top: 1.75rem;
+}
+
+
+a:link {
+  color: #062f99;
+}
+
+a:visited {
+  color: #365f99;
+}
