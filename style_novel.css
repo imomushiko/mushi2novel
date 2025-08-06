@@ -5,7 +5,7 @@ body {
     font-family: "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
     line-height: 1.8;
     margin: 0;
-    padding: 1em;
+    padding: 0.5em;
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
@@ -63,18 +63,6 @@ nav a:hover {
     color: #224444;
 }
 
-/* スマホでも見やすいように */
-@media screen and (max-width: 480px) {
-    body {
-        padding: 0.75em 0.5em;
-    }
-    nav {
-        flex-direction: column;
-        gap: 0.5em;
-        align-items: center;
-    }
-}
-
 /* 無効リンクを非表示 */
   .disabled {
     color: gray;
@@ -109,7 +97,7 @@ details[open] > summary.linklike::before {
 }
 
 .title .year {
-  font-size: 0.5em;
+  font-size: 1em;
   display: inline-block;
   vertical-align: baseline;
   margin-left: 0.1em;
