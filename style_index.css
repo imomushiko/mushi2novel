@@ -109,7 +109,6 @@ details[open] > summary.linklike::before {
 }
 
 .title .year {
-  font-size: 1em;
   display: inline-block;
   vertical-align: baseline;
   margin-left: 0.1em;
@@ -117,7 +116,6 @@ details[open] > summary.linklike::before {
 }
 
 .series .year {
-  font-size: 1em;
   display: inline-block;
   vertical-align: baseline;
   margin-left: 0.1em;
