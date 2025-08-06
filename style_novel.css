@@ -63,17 +63,6 @@ nav a:hover {
     color: #224444;
 }
 
-/* スマホでも見やすいように */
-@media screen and (max-width: 480px) {
-    body {
-        padding: 1em;
-    }
-    nav {
-        flex-direction: column;
-        gap: 0.5em;
-        align-items: center;
-    }
-}
 
 /* 無効リンクを非表示 */
   .disabled {
